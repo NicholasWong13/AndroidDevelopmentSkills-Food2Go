@@ -15,7 +15,7 @@ public class FoodCatActivity extends AppCompatActivity {
     private String pos;
     private static final String TAG = "FoodCatActivity";
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_cat);
 
