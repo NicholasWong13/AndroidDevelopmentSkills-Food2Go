@@ -1,4 +1,4 @@
-package ma.ensaf.fast_food_application.activity.Helper;
+package com.example.food2go.Helper;
 
 import android.content.Context;
 import android.widget.Toast;

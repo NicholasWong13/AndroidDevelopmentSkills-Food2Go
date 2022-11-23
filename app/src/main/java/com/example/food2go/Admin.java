@@ -1,2 +1,5 @@
-package com.example.food2go;public class Admin {
+package com.example.food2go;
+
+public class Admin {
+
 }

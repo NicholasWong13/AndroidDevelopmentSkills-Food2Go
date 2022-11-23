@@ -19,7 +19,7 @@
  *  and unicode 2017 that are used for separating the items in a list.
  */
 
-package ma.ensaf.fast_food_application.activity.Helper;
+package com.example.food2go.Helper;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -31,8 +31,6 @@ import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 
-
-import ma.ensaf.fast_food_application.activity.Domain.FoodDomain;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -41,6 +39,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
+
+import ma.ensaf.fast_food_application.activity.Domain.FoodDomain;
 
 
 public class TinyDB {
