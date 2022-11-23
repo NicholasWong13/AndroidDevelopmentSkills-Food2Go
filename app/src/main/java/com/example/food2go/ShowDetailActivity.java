@@ -126,6 +126,7 @@ public class ShowDetailActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+
             }
         });
     }

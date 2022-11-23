@@ -32,7 +32,7 @@ import com.google.firebase.database.ValueEventListener;ublic class CardListActiv
     private String totalAmount;
     private ScrollView scrollView;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)  {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_list);
