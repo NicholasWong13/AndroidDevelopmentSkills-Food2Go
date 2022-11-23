@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity implements {
 
     @Override
     public void onCategoryClick(int position) {
-        Intent intent = new Intent(this,FoodCatActivity.class);
+        Intent intent = new Intent(this,FoodCartActivity.class);
         intent.putExtra("selected_cat", categoryList.get(position));
         startActivity(intent);
     }

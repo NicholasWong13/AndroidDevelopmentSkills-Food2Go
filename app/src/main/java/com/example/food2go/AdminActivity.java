@@ -52,7 +52,7 @@ public class AdminActivity extends AppCompatActivity {
                 holder.userName.setText("Name : " + model.getName());
                 holder.userPhoneNumber.setText("Phone Number : " + model.getPhone());
                 holder.userTotalPrice.setText("Total Price : " + model.getTotal_amount());
-                holder.userAddress.setText("Shipping Address : " + model.getAdresse() + " , " + model.getCity());
+                holder.userAddress.setText("Shipping Address : " + model.getAddress() + " , " + model.getCity());
                 holder.userDateTime.setText("Ordered At : " + model.getDate() + "  -  " + model.getTime());
                 holder.ship_order_btn.setOnClickListener(new View.OnClickListener() {
                     @Override
