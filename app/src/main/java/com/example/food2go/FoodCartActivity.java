@@ -81,9 +81,6 @@ public class FoodCartActivity extends AppCompatActivity {
                 recyclerViewItemsList.setAdapter(adapter2);
                 break;
 
-
-
-
         }
 
 
