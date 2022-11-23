@@ -3,7 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/John_Joeshua/AndroidStudioProjects/AndroidDevelopmentSkills-Food2Go/app/src/main/res/layout/activity_cartlist.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/John_Joeshua/AndroidStudioProjects/AndroidDevelopmentSkills-Food2Go/app/src/main/res/layout/activity_food_cat.xml" value="0.271875" />
+        <entry key="..\:/Users/John_Joeshua/AndroidStudioProjects/AndroidDevelopmentSkills-Food2Go/app/src/main/res/layout/activity_foodcart.xml" value="0.271875" />
+        <entry key="..\:/Users/John_Joeshua/AndroidStudioProjects/AndroidDevelopmentSkills-Food2Go/app/src/main/res/layout/activity_show_detail.xml" value="0.22393162393162394" />
+        <entry key="..\:/Users/John_Joeshua/AndroidStudioProjects/AndroidDevelopmentSkills-Food2Go/app/src/main/res/layout/activity_showdetail.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/John_Joeshua/AndroidStudioProjects/AndroidDevelopmentSkills-Food2Go/app/src/main/res/layout/orders_layout.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/John_Joeshua/AndroidStudioProjects/AndroidDevelopmentSkills-Food2Go/app/src/main/res/layout/viewholder_card.xml" value="0.2230769230769231" />
+        <entry key="..\:/Users/John_Joeshua/AndroidStudioProjects/AndroidDevelopmentSkills-Food2Go/app/src/main/res/layout/viewholder_cart.xml" value="0.2230769230769231" />
+        <entry key="..\:/Users/John_Joeshua/AndroidStudioProjects/AndroidDevelopmentSkills-Food2Go/app/src/main/res/layout/viewholder_cat.xml" value="0.2046875" />
+        <entry key="..\:/Users/John_Joeshua/AndroidStudioProjects/AndroidDevelopmentSkills-Food2Go/app/src/main/res/layout/viewholder_items.xml" value="0.271875" />
+        <entry key="..\:/Users/John_Joeshua/AndroidStudioProjects/AndroidDevelopmentSkills-Food2Go/app/src/main/res/layout/viewholder_popular.xml" value="0.271875" />
         <entry key="..\:/Users/Surface/Documents/Food2Go/app/src/main/res/drawable/background.xml" value="0.1715" />
         <entry key="..\:/Users/Surface/Documents/Food2Go/app/src/main/res/drawable/email.xml" value="0.1715" />
         <entry key="..\:/Users/Surface/Documents/Food2Go/app/src/main/res/drawable/home.xml" value="0.1715" />

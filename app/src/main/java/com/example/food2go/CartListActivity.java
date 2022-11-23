@@ -21,9 +21,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-public class CardListActivity extends AppCompatActivity {
+import com.google.firebase.database.ValueEventListener;ublic class CardListActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private  RecyclerView recyclerViewList;
     public ManagementCard managementCard;
