@@ -3,6 +3,7 @@ package com.example.food2go;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -21,10 +22,13 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;ublic class CardListActivity extends AppCompatActivity {
+import com.google.firebase.database.ValueEventListener;
+
+
+public class CartListActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private  RecyclerView recyclerViewList;
-    public ManagementCard managementCard;
+    public  ManagementCard managementCard;
     private FirebaseUser user;
     private String userId;
     private TextView totalFeeTxt,taxTxt,deliveryTxt,totalTxt,emptyTxt,msgTxt,checkoutBtn;
@@ -35,7 +39,7 @@ import com.google.firebase.database.ValueEventListener;ublic class CardListActiv
     protected void onCreate(Bundle savedInstanceState)  {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_card_list);
+        setContentView(R.layout.activity_cart_list);
         managementCard = new ManagementCard(this);
         checkoutBtn =(TextView) findViewById(R.id.textView18);
         msgTxt =(TextView) findViewById(R.id.MessageTxt);
@@ -54,7 +58,7 @@ import com.google.firebase.database.ValueEventListener;ublic class CardListActiv
         checkoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CardListActivity.this,BillingDetailsActivity.class);
+                Intent intent = new Intent(CartListActivity.this,BillingDetailsActivity.class);
                 intent.putExtra("total Amount",totalAmount);
                 startActivity(intent);
             }
@@ -72,7 +76,7 @@ import com.google.firebase.database.ValueEventListener;ublic class CardListActiv
     private void initList() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         recyclerViewList.setLayoutManager(linearLayoutManager);
-        adapter = new CardListAdapter(managementCard.getListCard(), this, new ChangeNumberItemsListener() {
+        adapter = new CartListAdapter(managementCard.getListCard(), this, new ChangeNumberItemsListener() {
             @Override
             public void changed() {
                 calculateCard();
@@ -96,14 +100,14 @@ import com.google.firebase.database.ValueEventListener;ublic class CardListActiv
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CardListActivity.this,CardListActivity.class));
+                startActivity(new Intent(CartListActivity.this,CartListActivity.class));
             }
         });
 
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CardListActivity.this,MainActivity.class));
+                startActivity(new Intent(CartListActivity.this,MainActivity.class));
             }
         });
     }
@@ -113,10 +117,10 @@ import com.google.firebase.database.ValueEventListener;ublic class CardListActiv
         tax = Math.round((managementCard.getTotalFee()*percentTax)*100.0)/100.0;
         total = Math.round((managementCard.getTotalFee() + tax +delivery )*100.0)/100.0;
         double itemTotal = Math.round(managementCard.getTotalFee()*100.0)/100.0;
-        totalFeeTxt.setText("$" + itemTotal);
-        taxTxt.setText("$"+ tax);
-        deliveryTxt.setText("$" + delivery);
-        totalTxt.setText("$"+total);
+        totalFeeTxt.setText("RM" + itemTotal);
+        taxTxt.setText("RM"+ tax);
+        deliveryTxt.setText("RM" + delivery);
+        totalTxt.setText("RM"+total);
     }
     private void initView() {
         recyclerViewList = findViewById(R.id.recyclerview);
@@ -146,7 +150,7 @@ import com.google.firebase.database.ValueEventListener;ublic class CardListActiv
                         emptyTxt.setVisibility(View.GONE);
                         msgTxt.setText("Congratulations , your final product has been shipped successfully. Soon you will receive your order at your door step");
                         checkoutBtn.setVisibility(View.GONE);
-                        Toast.makeText(CardListActivity.this,"You can purchase more products once you receive your first order ",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CartListActivity.this,"You can purchase more products once you receive your first order ",Toast.LENGTH_SHORT).show();
                     }
                     else if (shippingState.equals("not shipped"))
                     {
@@ -154,7 +158,7 @@ import com.google.firebase.database.ValueEventListener;ublic class CardListActiv
                         msgTxt.setVisibility(View.VISIBLE);
                         checkoutBtn.setVisibility(View.GONE);
                         emptyTxt.setVisibility(View.GONE);
-                        Toast.makeText(CardListActivity.this,"You can purchase more products once you receive your first order ",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CartListActivity.this,"You can purchase more products once you receive your first order ",Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -165,7 +169,4 @@ import com.google.firebase.database.ValueEventListener;ublic class CardListActiv
             }
         });
     }
-
-
-
 }

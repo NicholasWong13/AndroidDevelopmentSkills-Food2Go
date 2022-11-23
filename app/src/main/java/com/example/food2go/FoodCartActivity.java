@@ -9,15 +9,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class FoodCatActivity extends AppCompatActivity {
+public class FoodCartActivity extends AppCompatActivity {
     private RecyclerView recyclerViewItemsList;
     private RecyclerView.Adapter adapter2;
     private String pos;
-    private static final String TAG = "FoodCatActivity";
+    private static final String TAG = "FoodCartActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_food_cat);
+        setContentView(R.layout.activity_food_cart);
 
 
         if(getIntent().hasExtra("selected_cat")) {
