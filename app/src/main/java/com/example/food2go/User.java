@@ -1,4 +1,4 @@
-package ma.ensaf.fast_food_application.activity;
+package com.example.food2go;
 
 public class User {
 
