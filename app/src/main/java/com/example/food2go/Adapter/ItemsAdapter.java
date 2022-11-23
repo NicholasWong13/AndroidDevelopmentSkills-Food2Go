@@ -12,25 +12,23 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.food2go.ShowDetailActivity;
 
-public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHolder> {
-
+public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
     ArrayList<FoodDomain> foodDomains;
 
-    public PopularAdapter(ArrayList<FoodDomain> FoodDomains) {
+    public ItemsAdapter(ArrayList<FoodDomain> FoodDomains) {
         this.foodDomains = FoodDomains;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_popular,parent,false);
+    public ItemsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewhodler_items,parent,false);
         return new ViewHolder(inflate);
     }
 
 
-
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder,int position) {
+    public void onBindViewHolder(@NonNull ItemsAdapter.ViewHolder holder, int position) {
         holder.title.setText(foodDomains.get(position).getTitle());
         holder.fee.setText(String.valueOf(foodDomains.get(position).getFee()));
 
@@ -48,7 +46,6 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
             }
         });
     }
-
 
 
 
@@ -71,4 +68,7 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
             addBtn = itemView.findViewById(R.id.addBtn);
         }
     }
+
+
+
 }
