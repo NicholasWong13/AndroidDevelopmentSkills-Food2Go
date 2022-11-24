@@ -11,6 +11,12 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.example.food2go.R;
+import com.example.food2go.Domain.CategoryDomain;
+
+import java.util.ArrayList;
+
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
 
     ArrayList<CategoryDomain> categoryDomains;
@@ -24,7 +30,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_cat,parent,false);
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_cart,parent,false);
         return new ViewHolder(inflate,mOnCategoryListener);
     }
 
@@ -63,10 +69,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         Glide.with(holder.itemView.getContext())
                 .load(drawableResourceId)
                 .into(holder.categoryPic);
-
-
-
-
 
     }
 

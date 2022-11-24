@@ -10,15 +10,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.example.food2go.Interface.ChangeNumberItemsListener;
+import com.example.food2go.R;
 import com.example.food2go.Domain.FoodDomain;
 import com.example.food2go.Helper.ManagementCard;
 
-public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.ViewHolder> {
+import java.util.ArrayList;
+
+public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHolder> {
 
     private ArrayList<FoodDomain> foodDomains;
     private ManagementCard managementCard;
     private ChangeNumberItemsListener changeNumberItemsListener;
-    public CardListAdapter(ArrayList<FoodDomain> FoodDomains, Context context, ChangeNumberItemsListener changeNumberItemsListener){
+    public CartListAdapter(ArrayList<FoodDomain> FoodDomains, Context context, ChangeNumberItemsListener changeNumberItemsListener){
 
         this.foodDomains = FoodDomains;
         managementCard = new ManagementCard(context);
@@ -26,7 +31,7 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.ViewHo
 
     }
 
-    public CardListAdapter(ArrayList<FoodDomain> FoodDomains) {
+    public CartListAdapter(ArrayList<FoodDomain> FoodDomains) {
         this.foodDomains = FoodDomains;
     }
 

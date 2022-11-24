@@ -10,7 +10,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.example.food2go.Domain.FoodDomain;
+import com.example.food2go.R;
 import com.example.food2go.ShowDetailActivity;
+
+import java.util.ArrayList;
 
 public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
     ArrayList<FoodDomain> foodDomains;
@@ -22,7 +27,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
     @NonNull
     @Override
     public ItemsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewhodler_items,parent,false);
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_items,parent,false);
         return new ViewHolder(inflate);
     }
 

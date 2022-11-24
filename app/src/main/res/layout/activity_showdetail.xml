@@ -38,7 +38,7 @@
             android:id="@+id/priceTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="$"
+            android:text="RM"
             android:textColor="#ff5e00"
             android:textAlignment="center"
             android:textSize="24sp"

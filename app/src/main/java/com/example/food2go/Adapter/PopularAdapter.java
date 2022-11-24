@@ -10,7 +10,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.food2go.R;
+import com.bumptech.glide.Glide;
+import com.example.food2go.Domain.FoodDomain;
 import com.example.food2go.ShowDetailActivity;
+
+import java.util.ArrayList;
 
 public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHolder> {
 

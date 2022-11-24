@@ -31,6 +31,7 @@ import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.example.food2go.Domain.FoodDomain;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -40,7 +41,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
 
-import ma.ensaf.fast_food_application.activity.Domain.FoodDomain;
+import com.example.food2go.Domain.FoodDomain;
 
 
 public class TinyDB {

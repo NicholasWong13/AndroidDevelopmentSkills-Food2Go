@@ -3,10 +3,11 @@ package com.example.food2go.Helper;
 import android.content.Context;
 import android.widget.Toast;
 
+import com.example.food2go.Domain.FoodDomain;
+import com.example.food2go.Interface.ChangeNumberItemsListener;
+
 import java.util.ArrayList;
 
-import ma.ensaf.fast_food_application.activity.Domain.FoodDomain;
-import ma.ensaf.fast_food_application.activity.Interface.ChangeNumberItemsListener;
 
 public class ManagementCard {
     private Context context;
@@ -35,19 +36,19 @@ public class ManagementCard {
 
         }
 
-        tinyDB.putListObject("CardList",listFood);
+        tinyDB.putListObject("CartList",listFood);
         Toast.makeText(context,"Added to your card",Toast.LENGTH_SHORT).show();
 
 
     }
 
     public  ArrayList<FoodDomain> getListCard(){
-        return tinyDB.getListObject("CardList");
+        return tinyDB.getListObject("CartList");
     }
 
     public void plusNumberFood(ArrayList<FoodDomain> listfood, int position, ChangeNumberItemsListener changeNumberItemsListener){
         listfood.get(position).setNumberInCard(listfood.get(position).getNumberInCard()+1);
-        tinyDB.putListObject("CardList",listfood);
+        tinyDB.putListObject("CartList",listfood);
         changeNumberItemsListener.changed();
     }
     public  void MinusNumberFood(ArrayList<FoodDomain> listfood,int position,ChangeNumberItemsListener changeNumberItemsListener){
@@ -57,7 +58,7 @@ public class ManagementCard {
         else{
             listfood.get(position).setNumberInCard(listfood.get(position).getNumberInCard() - 1);
         }
-        tinyDB.putListObject("CardList",listfood);
+        tinyDB.putListObject("CartList",listfood);
         changeNumberItemsListener.changed();
     }
     public  Double getTotalFee() {

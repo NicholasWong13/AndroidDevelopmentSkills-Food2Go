@@ -14,7 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.food2go.Adapter.CartListAdapter;
 import com.example.food2go.Helper.ManagementCard;
+import com.example.food2go.Interface.ChangeNumberItemsListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -27,7 +29,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class CartListActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
-    private  RecyclerView recyclerViewList;
+    private RecyclerView recyclerViewList;
     public  ManagementCard managementCard;
     private FirebaseUser user;
     private String userId;
@@ -39,7 +41,7 @@ public class CartListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)  {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart_list);
+        setContentView(R.layout.activity_cartlist);
         managementCard = new ManagementCard(this);
         checkoutBtn =(TextView) findViewById(R.id.textView18);
         msgTxt =(TextView) findViewById(R.id.MessageTxt);
@@ -54,7 +56,7 @@ public class CartListActivity extends AppCompatActivity {
 
 
 
-        totalAmount = "$"+total;
+        totalAmount = "RM"+total;
         checkoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

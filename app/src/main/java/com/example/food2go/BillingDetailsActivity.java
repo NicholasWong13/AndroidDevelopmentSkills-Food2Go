@@ -18,6 +18,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.example.food2go.Helper.ManagementCard;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -44,7 +47,7 @@ public class BillingDetailsActivity extends AppCompatActivity {
 
     FusedLocationProviderClient fusedLocationProviderClient;
 
-    EditText nameEditText,phoneEditText,adresseEditText,cityEditText,textView_Location,editTextTextPersonName;
+    EditText nameEditText,phoneEditText,addressEditText,cityEditText,textView_Location,editTextTextPersonName;
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +66,7 @@ public class BillingDetailsActivity extends AppCompatActivity {
         userId=user.getUid();
         nameEditText = findViewById(R.id.editTextTextPersonName6);
         phoneEditText = findViewById(R.id.editTextTextPersonName5);
-        adresseEditText = findViewById(R.id.textView_Location);
+        addressEditText = findViewById(R.id.textView_Location);
         cityEditText = findViewById(R.id.editTextTextPersonName);
         textView_Location =  findViewById(R.id.textView_Location);
         editTextTextPersonName =  findViewById(R.id.editTextTextPersonName);
@@ -148,7 +151,7 @@ public class BillingDetailsActivity extends AppCompatActivity {
         ordersMap.put("total_amount",totalAmount);
         ordersMap.put("name",nameEditText.getText().toString());
         ordersMap.put("phone",phoneEditText.getText().toString());
-        ordersMap.put("adresse",adresseEditText.getText().toString());
+        ordersMap.put("address",addressEditText.getText().toString());
         ordersMap.put("city",cityEditText.getText().toString());
         ordersMap.put("date",saveCurrentDate);
         ordersMap.put("time",saveCurrentTime);

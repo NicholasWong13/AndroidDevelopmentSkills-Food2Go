@@ -9,6 +9,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+import com.example.food2go.Domain.FoodDomain;
 import com.example.food2go.Helper.ManagementCard;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -32,7 +34,7 @@ public class ShowDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show_detail);
+        setContentView(R.layout.activity_showdetail);
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         userId=user.getUid();

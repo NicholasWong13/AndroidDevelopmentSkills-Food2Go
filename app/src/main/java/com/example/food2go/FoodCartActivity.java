@@ -7,6 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.food2go.Adapter.ItemsAdapter;
+import com.example.food2go.Domain.CategoryDomain;
+import com.example.food2go.Domain.FoodDomain;
+
 import java.util.ArrayList;
 
 public class FoodCartActivity extends AppCompatActivity {
@@ -17,7 +21,7 @@ public class FoodCartActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_food_cart);
+        setContentView(R.layout.activity_foodcart);
 
 
         if(getIntent().hasExtra("selected_cat")) {

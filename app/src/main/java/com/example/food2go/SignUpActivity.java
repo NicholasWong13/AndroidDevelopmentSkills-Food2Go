@@ -3,6 +3,7 @@ package com.example.food2go;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -19,6 +20,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.auth.User;
+
+import com.example.food2go.R;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -76,7 +79,7 @@ public class SignUpActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    user = new User(email, password, userName, phoneNumber, address);
+
                                     FirebaseDatabase.getInstance().getReference("user")
                                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                             .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
